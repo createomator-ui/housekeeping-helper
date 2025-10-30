@@ -1,0 +1,91 @@
+
+/* Base styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Dark mode optimized colors */
+.dark {
+    --bg-primary: #111827;
+    --bg-secondary: #1F2937;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --highlight-green: #10B981;
+    --highlight-red: #EF4444;
+    --highlight-yellow: #F59E0B;
+    --highlight-purple: #8B5CF6;
+}
+
+/* Touch-friendly elements */
+button, a {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.note-btn {
+    transition: transform 0.1s ease;
+}
+
+.note-btn:active {
+    transform: scale(0.9);
+}
+
+.stat-card {
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+/* Room card animations */
+.room-card {
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Status indicators */
+.status-clean {
+    border-left-color: #10B981;
+}
+
+.status-dirty {
+    border-left-color: #EF4444;
+}
+
+.status-in-progress {
+    border-left-color: #F59E0B;
+}
+
+.status-maintenance {
+    border-left-color: #8B5CF6;
+}
+
+/* Dark mode overrides */
+.dark .status-clean {
+    border-left-color: #10B981;
+}
+
+.dark .status-dirty {
+    border-left-color: #EF4444;
+}
+
+.dark .status-in-progress {
+    border-left-color: #F59E0B;
+}
+
+.dark .status-maintenance {
+    border-left-color: #8B5CF6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .room-card {
+        padding: 0.75rem;
+    }
+}
