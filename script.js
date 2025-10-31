@@ -127,4 +127,5 @@ function showNotification(message, type = 'info') {
         notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
         setTimeout(() => notification.remove(), 300);
     }, 3000);
+
 }
