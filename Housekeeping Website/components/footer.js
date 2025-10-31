@@ -1,4 +1,4 @@
-../class CustomFooter extends HTMLElement {
+class CustomFooter extends HTMLElement {
     connectedCallback() {
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = `
